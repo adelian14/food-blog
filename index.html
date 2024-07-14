@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/all.min.css">
+    <link rel="stylesheet" href="./css/output.css">
+    <title>Food Blog</title>
+</head>
+
+<body class="bg-main-bg">
+    <section id="loader"
+        class="flex z-30 justify-center items-center fixed top-0 bottom-0 start-0 end-0 bg-main-bg bg-opacity-50">
+        <div class="flex-col gap-4 w-full flex items-center justify-center">
+            <div
+                class="w-28 h-28 border-8 text-blue-400 text-4xl animate-spin border-gray-300 flex items-center justify-center border-t-blue-400 rounded-full">
+            </div>
+        </div>
+    </section>
+    <section id="SideMenu">
+        <div id="side-menu" class="h-screen flex fixed top-0 left-0 z-20" expand="1">
+            <div class="h-100 w-48 md:w-60 bg-main-bg flex justify-between flex-col">
+                <ul id="side-menu-items" class="text-white pt-2">
+                    <li class="cursor-pointer my-3 py-1 ps-3" target="Search">Search</li>
+                    <li class="cursor-pointer my-3 py-1 ps-3" target="Categories">Categories</li>
+                    <li class="cursor-pointer my-3 py-1 ps-3" target="Area">Area</li>
+                    <li class="cursor-pointer my-3 py-1 ps-3" target="Ingredients">Ingredients</li>
+                    <li class="cursor-pointer my-3 py-1 ps-3" target="Contact-Us">Contact Us</li>
+                </ul>
+                <div class="ps-3 mb-8">
+                    <p class="text-white mb-4">
+                        <span class="me-4 cursor-pointer"><i class="fa-brands fa-facebook"></i></span>
+                        <span class="me-4 cursor-pointer"><i class="fa-brands fa-twitter"></i></span>
+                        <span class="me-4 cursor-pointer"><i class="fa-solid fa-globe"></i></span>
+                    </p>
+                    <p class="text-white">Copyright 2024 &copy; All rights reserved</p>
+                </div>
+            </div>
+            <div class="h-100 w-10 md:w-12 bg-white py-3 flex justify-between items-center flex-col">
+                <img src="./assets/imgs/logo.png" class="w-[90%]" alt="">
+                <p class="text-center py-4 cursor-pointer" id="expand-menu"><i
+                        class="fa-solid fa-plus md:text-4xl text-2xl"></i></p>
+                <p class="text-center"><i class="fa-solid fa-globe md:text-2xl text-lg"></i></p>
+            </div>
+        </div>
+    </section>
+    <section id="Home" role="main-section">
+    </section>
+    <section id="Search" role="main-section">
+        <div class="my-container flex justify-center items-center">
+            <div class="p-3 w-1/2">
+                <input type="text" class="my-input p-2 text-white text-lg" placeholder="Search By Name"
+                    id="searchByName">
+            </div>
+            <div class="p-3 w-1/2">
+                <input type="text" class="my-input p-2 text-white text-lg" placeholder="Search By First Letter"
+                    id="searchByFirstLetter" maxlength="1">
+            </div>
+        </div>
+        <section id="secondary-section">
+
+        </section>
+    </section>
+    <section id="Categories" role="main-section">
+    </section>
+    <section id="Area" role="main-section">
+    </section>
+    <section id="Ingredients" role="main-section">
+    </section>
+    <section id="Contact-Us" role="main-section">
+        <div class="my-container">
+            <div class="w-10/12 m-auto h-screen flex justify-center items-center flex-wrap">
+                <div class="w-100 flex justify-center items-center flex-wrap">
+                    <div class="md:w-1/2 w-full h-full px-3 md:px-5">
+                        <input type="text" class="my-input p-2 text-white text-lg" id="name-input"
+                            placeholder="Enter Your Name">
+                        <div class="h-9 ps-2 pt-1">
+                            <div target="name-input" role="invalid-msg" class="text-red-500">Invalid name. Only letters
+                                and spaces are allowed</div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 w-full h-full px-3 md:px-5">
+                        <input type="email" class="my-input p-2 text-white text-lg" id="email-input"
+                            placeholder="Enter Your Email">
+                        <div class="h-9 ps-2 pt-1">
+                            <div target="email-input" role="invalid-msg" class="text-red-500">Invalid email address
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 w-full h-full px-3 md:px-5">
+                        <input type="text" class="my-input p-2 text-white text-lg" id="phone-input"
+                            placeholder="Enter Your Phone Number">
+                        <div class="h-9 ps-2 pt-1">
+                            <div target="phone-input" role="invalid-msg" class="text-red-500">Invalid phone number. Must
+                                be between 8 and 15 digits</div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 w-full h-full px-3 md:px-5">
+                        <input type="text" class="my-input p-2 text-white text-lg" id="age-input"
+                            placeholder="Enter Your Age">
+                        <div class="h-9 ps-2 pt-1">
+                            <div target="age-input" role="invalid-msg" class="text-red-500">Invalid age. Must be between
+                                18 and 99</div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 w-full h-full px-3 md:px-5">
+                        <input type="password" class="my-input p-2 text-white text-lg" id="password-input"
+                            placeholder="Enter Your Password">
+                        <div class="h-9 ps-2 pt-1">
+                            <div target="password-input" role="invalid-msg" class="text-red-500">Invalid password. Must
+                                be at least 8 characters, include one uppercase letter and one number</div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 w-full h-full px-3 md:px-5">
+                        <input type="password" class="my-input p-2 text-white text-lg" id="repassword-input"
+                            placeholder="Re-Enter Your Password">
+                        <div class="h-9 ps-2 pt-1">
+                            <div target="repassword-input" role="invalid-msg" class="text-red-500">Passwords do not
+                                match</div>
+                        </div>
+                    </div>
+                        <h4 class="duration-150 m-auto py-2 rounded-md w-1/4 md:w-1/6 text-center text-white text-xl bg-red-400 cursor-not-allowed inline-block"
+                            id="send-btn">Submit</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="single-meal" role="main-section">
+    </section>
+    <script src="./assets/jquery-3.7.1.min.js"></script>
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
